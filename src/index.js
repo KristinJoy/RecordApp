@@ -13,16 +13,14 @@ class Deck extends React.Component {
   render(){
     let result = [];
     for (var i = 0; i < Data.records.length; i++) {
-      result.push(<Card record={Data.records[i]}/>);
+      result.push(<Card key={i} record={Data.records[i]}/>);
     }
     return(result)
   }
 }
 
 class Card extends React.Component {
-  constructor(){
-    super()
-  }
+  
   render(){
     console.log(this.props.record);
     return(
