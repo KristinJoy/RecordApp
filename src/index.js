@@ -13,7 +13,7 @@ class Deck extends React.Component {
   render(){
     let result = [];
     for (var i = 0; i < Data.records.length; i++) {
-      result.push(<Card record={Data.records[i]}/>);
+      result.push(<Card key={i} record={Data.records[i]}/>);
     }
     return(result)
   }
@@ -26,17 +26,15 @@ class Card extends React.Component {
   render(){
     console.log(this.props.record);
     return(
-      <div class="flex-container">
+      <div className="flex-container">
         <div className="card">
           <h3 className="title">{this.props.record.title}</h3>
             <ul className="album-info">
               <li>{this.props.record.artist}</li>
-              <li>{this.props.record.genre}</li>
               <li>{this.props.record.label}</li>
               <li>{this.props.record.year}</li>
+              <li>{this.props.record.genre}</li>
             </ul>
-            <ol className="tracks">
-              <li>
                 <ul className="track-info">
                   <li>{this.props.record.title}</li>
                   <li>{this.props.record.duration}</li>
@@ -44,8 +42,6 @@ class Card extends React.Component {
                   <li>{this.props.record.key}</li>
                   <li>{this.props.record.composer}</li>
                 </ul>
-              </li>
-            </ol>
           </div>
       </div>
     ) //render page
