@@ -26,7 +26,7 @@ class Card extends React.Component {
   render(){
     console.log(this.props.record);
     return(
-      <div class="flex-container">
+      <div className="flex-container">
         <div className="card">
           <h3 className="title">{this.props.record.title}</h3>
             <ul className="album-info">
