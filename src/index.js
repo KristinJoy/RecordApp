@@ -1,12 +1,59 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import Data from './records.json';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+class App extends React.Component {
+  render(){
+    return(<Deck/>)
+  }
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+class Deck extends React.Component {
+  render(){
+    let result = [];
+    for (var i = 0; i < Data.records.length; i++) {
+      result.push(<Card record={Data.records[i]}/>);
+    }
+    return(result)
+  }
+}
+
+class Card extends React.Component {
+  constructor(){
+    super()
+  }
+  render(){
+    console.log(this.props.record);
+    return(
+      <div class="flex-container">
+        <div className="card">
+          <h3 className="title">{this.props.record.title}</h3>
+            <ul className="album-info">
+              <li>{this.props.record.artist}</li>
+              <li>{this.props.record.genre}</li>
+              <li>{this.props.record.label}</li>
+              <li>{this.props.record.year}</li>
+            </ul>
+            <ol className="tracks">
+              <li>
+                <ul className="track-info">
+                  <li>{this.props.record.title}</li>
+                  <li>{this.props.record.duration}</li>
+                  <li>{this.props.record.bpm}</li>
+                  <li>{this.props.record.key}</li>
+                  <li>{this.props.record.composer}</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+      </div>
+    ) //render page
+  }
+}
+
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);

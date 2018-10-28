@@ -1,0 +1,100 @@
+{
+  "records": [
+    {
+      "title": "LA Woman",
+      "artist": "The Doors",
+      "year": 1970,
+      "genre":"Acid Rock",
+      "record label":"Electra",
+      "tracks": [
+        {
+          "title": "LA Woman",
+          "duration": "5 min",
+          "bpm": 90,
+          "key": "5A",
+          "composer": "Jim Morrison"
+        }
+      ]
+    },
+    {
+      "title":"The Crane Wife",
+      "artist":"The Decemberists",
+      "year": 2006,
+      "genre":["Folk Rock", "Indy Rock"],
+      "record label":"Capitol/Rough Trade",
+      "tracks": [
+        {
+          "title": "O Valencia!",
+          "duration": "5 min",
+          "bpm": 90,
+          "key": "5A",
+          "composer": "Colin Meloy"
+        }
+      ]
+    },
+    {
+      "title":"A Town Called Paradise",
+      "artist":"Tiesto",
+      "year":"2005",
+      "genre":["Electro-House"],
+      "record label":"Musical Freedom",
+      "tracks": [
+        {
+          "title": "Town Called Paradise",
+          "duration": "3 min",
+          "bpm": 128,
+          "key": "8A",
+          "composer": "Tiesto"
+        }
+      ]
+    },
+    {
+      "title":"Time Without Consequence",
+      "artist":"Alexi Murdoch",
+      "year":2006,
+      "genre":["Alternative", "Indy Folk"],
+      "record label":"Zero Summer",
+      "tracks": [
+        {
+          "title": "All My Days",
+          "duration": "4 min",
+          "bpm": 1,
+          "key": "7A",
+          "composer": "Alexi Murdoch"
+        }
+      ]
+    },
+    {
+      "title":"A Moment Apart",
+      "artist":"ODESZA",
+      "year":2017,
+      "genre":["Future Bass"],
+      "record label":"Foreign Family Collective",
+      "tracks": [
+        {
+          "title": "Higher Ground",
+          "duration": "3 min",
+          "bpm": 105,
+          "key": "11A",
+          "composer": "ODESZA"
+        }
+      ]
+    },
+    {
+      "title":"The Dark Side of the Moon",
+      "artist":"Pink Floyd",
+      "year":1973,
+      "genre":["Progressive Rock"],
+      "record label":"Harvest",
+      "tracks": [
+        {
+          "title": "Money",
+          "duration": "7 min",
+          "bpm": 105,
+          "key": "7A",
+          "composer": "Roger Waters"
+        }
+      ]
+    }
+  ]
+}
