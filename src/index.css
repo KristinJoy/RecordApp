@@ -29,28 +29,30 @@
   margin: 0
 }
 
-.flex-container {
+.card-container {
   display: flex;
   flex-wrap: wrap;
 }
 
-.flex-container > div {
+.card-container > div {
   width: 500px;
   height:500px;
   margin: 10px;
 }
 
 
-.card {
+.card-body {
   margin: 1rem;
   background: white;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
   border-radius: 50%;
   overflow: hidden;
   transition: all .2s linear;
+  backface-visibility: hidden;
 }
+/* ^^^ The backface-visibility being hidden is probably the only reason why it looks like a card flips to a backside. There might not be any actual target area to put stuff on the backside. */
 
-.card:hover {
+.card-body:hover {
   box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
   transform: translate3D(0, -2px, 0);
 }
@@ -70,4 +72,15 @@
 
 .title:nth-child(3){
   background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
+}
+
+/*- Flipping the card -*/
+.card-container:hover .card-body {
+  transform: rotateY(180deg);
+}
+
+.card-container:hover > .card-body > .side-front {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in, visibility .75s linear;
 }
