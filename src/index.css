@@ -71,11 +71,3 @@
 .title:nth-child(3){
   background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
 }
-
-.album-info {
-  list-style-type: none;
-}
-
-.track-info {
-  list-style-type: none;
-}
