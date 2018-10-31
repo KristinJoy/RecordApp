@@ -60,11 +60,11 @@
   flex-wrap: wrap;
 }
 
-.flex-container:nth-child(2n) .title {
+.flex-container:nth-child(2n) .title  {
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
 
-.flex-container:nth-child(3n) .title  {
+.flex-container:nth-child(3n)  .title {
   background-image: linear-gradient(120deg, #ff9a9e 0%, #fecfef 100%);
 }
 
