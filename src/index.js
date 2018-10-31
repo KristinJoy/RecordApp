@@ -27,29 +27,53 @@ render(){
   console.log(this.props.record);
   return(
     <div className="flex-container">
-    <div className="card">
-      <img className="image" src = {this.props.record.art} />
-      <h3 className="title">{this.props.record.title}</h3>
-      <ul className="album-info">
-        <li>{this.props.record.artist}</li>
-        <li>{this.props.record.genre}</li>
-        <li>{this.props.record.label}</li>
-        <li>{this.props.record.year}</li>
-      </ul>
+      <div className="card">
+        <img className="image" src = {this.props.record.art} />
+        <h3 className="title">{this.props.record.title}</h3>
+        <ul className="album-info">
+          <li>{this.props.record.artist}</li>
+          <li>{this.props.record.genre}</li>
+          <li>{this.props.record.label}</li>
+          <li>{this.props.record.year}</li>
+        </ul>
 
-      <ol className="tracks">
-        <li className="track">
-          <ul className="track-info">
-            <li>{this.props.record.title}</li>
-            <li>{this.props.record.duration}</li>
-            <li>{this.props.record.bpm}</li>
-            <li>{this.props.record.key}</li>
-            <li>{this.props.record.composer}</li>
-          </ul>
-        </li>
-      </ol>
+        <ol className="tracks">
+          <li className="track">
+            <ul className="track-info">
+              <li>{this.props.record.title}</li>
+              <li>{this.props.record.duration}</li>
+              <li>{this.props.record.bpm}</li>
+              <li>{this.props.record.key}</li>
+              <li>{this.props.record.composer}</li>
+            </ul>
+          </li>
+        </ol>
       </div>
     </div>
+    )
+  }
+}
+
+class CardFront extends React.Component {
+  render() {
+    return(
+      <div className='card-side sidee-front'>
+        <div className='container-fluid'>
+        </div>
+      </div>
+    )
+  }
+
+}
+
+class CardBack extends React.Component {
+  render() {
+    return(
+      <div className='card-side sidee-front'>
+        <div className='container-fluid'>
+        </div>
+      </div>
+
     )
   }
 }
