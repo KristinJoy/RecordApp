@@ -6,6 +6,7 @@
       "year": 1970,
       "genre":"Acid Rock",
       "record label":"Electra",
+      "art": "albumArt/LAWoman.jpg",
       "tracks": [
         {
           "title": "LA Woman",
@@ -22,6 +23,7 @@
       "year": 2006,
       "genre":["Folk Rock", "Indy Rock"],
       "record label":"Capitol/Rough Trade",
+      "art": "albumArt/cranewife.jpg",
       "tracks": [
         {
           "title": "O Valencia!",
@@ -38,6 +40,7 @@
       "year":"2005",
       "genre":["Electro-House"],
       "record label":"Musical Freedom",
+      "art": "albumArt/Tiesto.jpg",
       "tracks": [
         {
           "title": "Town Called Paradise",
@@ -54,6 +57,7 @@
       "year":2006,
       "genre":["Alternative", "Indy Folk"],
       "record label":"Zero Summer",
+      "art": "albumArt/Alexi.jpg",
       "tracks": [
         {
           "title": "All My Days",
@@ -70,6 +74,7 @@
       "year":2017,
       "genre":["Future Bass"],
       "record label":"Foreign Family Collective",
+      "art": "albumArt/amomentapart.jpg",
       "tracks": [
         {
           "title": "Higher Ground",
@@ -86,6 +91,7 @@
       "year":1973,
       "genre":["Progressive Rock"],
       "record label":"Harvest",
+      "art": "albumArt/pinkfloyd.jpg",
       "tracks": [
         {
           "title": "Money",
