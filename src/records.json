@@ -5,7 +5,8 @@
       "artist": "The Doors",
       "year": 1970,
       "genre":"Acid Rock",
-      "label":"Electra",
+      "record label":"Electra",
+      "art": "albumArt/LAWoman.jpg",
       "tracks": [
         {
           "title": "LA Woman",
@@ -20,8 +21,9 @@
       "title":"The Crane Wife",
       "artist":"The Decemberists",
       "year": 2006,
-      "genre":["Folk Rock ", "Indy Rock"],
-      "label":"Capitol/Rough Trade",
+      "genre":["Folk Rock", "Indy Rock"],
+      "record label":"Capitol/Rough Trade",
+      "art": "albumArt/cranewife.jpg",
       "tracks": [
         {
           "title": "O Valencia!",
@@ -37,7 +39,8 @@
       "artist":"Tiesto",
       "year":"2005",
       "genre":["Electro-House"],
-      "label":"Musical Freedom",
+      "record label":"Musical Freedom",
+      "art": "albumArt/Tiesto.jpg",
       "tracks": [
         {
           "title": "Town Called Paradise",
@@ -52,8 +55,9 @@
       "title":"Time Without Consequence",
       "artist":"Alexi Murdoch",
       "year":2006,
-      "genre":["Alternative ", "Indy Folk"],
-      "label":"Zero Summer",
+      "genre":["Alternative", "Indy Folk"],
+      "record label":"Zero Summer",
+      "art": "albumArt/Alexi.jpg",
       "tracks": [
         {
           "title": "All My Days",
@@ -69,7 +73,8 @@
       "artist":"ODESZA",
       "year":2017,
       "genre":["Future Bass"],
-      "label":"Foreign Family Collective",
+      "record label":"Foreign Family Collective",
+      "art": "albumArt/amomentapart.jpg",
       "tracks": [
         {
           "title": "Higher Ground",
@@ -85,7 +90,8 @@
       "artist":"Pink Floyd",
       "year":1973,
       "genre":["Progressive Rock"],
-      "label":"Harvest",
+      "record label":"Harvest",
+      "art": "albumArt/pinkfloyd.jpg",
       "tracks": [
         {
           "title": "Money",
