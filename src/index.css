@@ -166,7 +166,6 @@ img {
 
 .side-back {
   z-index: 2;
-  padding: 32px;
   text-align: center;
   transform: rotateY(180deg);
 }
