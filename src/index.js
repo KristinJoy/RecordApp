@@ -30,7 +30,7 @@ class CardFront extends React.Component {
         <div className='container-fluid'>
           <div className='row'>
             <div className='col-xs-6'>
-              <img src='https://cdn.cidentertainment.com/wp-content/uploads/sites/14/2017/11/ODESZA_2018_Header.jpg' />
+              <img src='https://rosequarter.com/wp-content/uploads/2017/07/17Odesza1080X1080_v1.jpg' />
             </div>
               <div className='col-xs-6 side-front-content'>
             </div>
