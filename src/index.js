@@ -1,86 +1,63 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Data from './records.json';
 
-class App extends React.Component {
-  render(){
-    return(<Deck/>)
-  }
-}
-
-class Deck extends React.Component {
-  render(){
-    let result = [];
-    for (var i = 0; i < Data.records.length; i++) {
-      result.push(<Card record={Data.records[i]}/>);
-    }
-    return(result)
-  }
-}
+// -------------------------------------------
+// MAIN COMPONENT
+// -------------------------------------------
 
 class Card extends React.Component {
-  constructor(){
-    super()
-  }
-  render(){
+  render() {
     return(
-      <div class="card-container">
-        <div className="card-body">
+      <div className='card-container'>
+        <div className='card-body'>
           <CardBack />
 
-
-            <cardFront />
-            <h3 className="title">{this.props.record.title}</h3>
-              <ul className="album-info">
-                <li>{this.props.record.artist}</li>
-                <li>{this.props.record.genre}</li>
-                <li>{this.props.record.label}</li>
-                <li>{this.props.record.year}</li>
-              </ul>
-              <ol className="tracks">
-                <li>
-                  <ul className="track-info">
-                    <li>{this.props.record.title}</li>
-                    <li>{this.props.record.duration}</li>
-                    <li>{this.props.record.bpm}</li>
-                    <li>{this.props.record.key}</li>
-                    <li>{this.props.record.composer}</li>
-                  </ul>
-                </li>
-              </ol>
-          </div>
+          <CardFront />
+        </div>
       </div>
-    ) //render page
+    )
   }
 }
 
+// -------------------------------------------
+// FRONT SIDE
+// -------------------------------------------
 class CardFront extends React.Component {
   render() {
     return(
-      <div className='card-side sidee-front'>
+      <div className='card-side side-front'>
         <div className='container-fluid'>
+          <div className='row'>
+            <div className='col-xs-6'>
+              <img src='https://cdn.cidentertainment.com/wp-content/uploads/sites/14/2017/11/ODESZA_2018_Header.jpg' />
+            </div>
+              <div className='col-xs-6 side-front-content'>
+            </div>
+          </div>
         </div>
       </div>
     )
   }
-
 }
 
+// -------------------------------------------
+// BACK SIDE
+// -------------------------------------------
 class CardBack extends React.Component {
   render() {
     return(
-      <div className='card-side sidee-front'>
+      <div className='card-side side-back'>
         <div className='container-fluid'>
+          <h1>Album Info</h1>
+          <p>Put stuff here</p>
         </div>
       </div>
-
     )
   }
 }
 
-
 ReactDOM.render(
-  <App />,
+  <Card />,
   document.getElementById('root')
 );
