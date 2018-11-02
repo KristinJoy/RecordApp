@@ -8,7 +8,38 @@ import Data from './records.json';
 // -------------------------------------------
 class App extends React.Component {
   render() {
-    return(<Deck/>)
+    return(
+      <div>
+        <Header/>
+        <Deck/>
+      </div>
+    )
+  }
+}
+
+// -------------------------------------------
+// Header Component
+// -------------------------------------------
+
+// Create a responsive, non-rectangular header (SVG trapezoidal header)
+
+class Header extends React.Component {
+  render() {
+    return(
+      <div className='svg-header'>
+        <h1>RECORD TIME</h1>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          >
+            <polygon
+            fill="#e6e6e6"
+            points="0,100 100,0 100,100"
+            />
+          </svg>
+      </div>
+    )
   }
 }
 
@@ -44,12 +75,6 @@ class Card extends React.Component {
     )
   }
 }
-
-
-
-// Adding the following code snippet to CardBack to try to link to JSON Data will just break the whole app:
-// <h3 className="title">{this.props.record.title}</h3>
-// Returns a "TypeError: Cannot read property 'title' of undefined"
 
 // -------------------------------------------
 // Front Side Component
