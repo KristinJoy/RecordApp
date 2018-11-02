@@ -46,14 +46,21 @@ ul {
   position: relative;
   z-index: 1;
   margin: 32px auto;
-  max-width: 720px;
-  height: 420px;
+  max-width: 520px;
   perspective: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-container > div {
+  width: 500px;
+  height:500px;
+  margin: 10px;
 }
 
 img {
-  max-width: 100%;
-  max-height: 100%;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .card-body {
@@ -68,22 +75,6 @@ img {
 .card-body > div {
   border-radius: 50%;
   overflow: hidden;
-}
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.card-container > div {
-  width: 500px;
-  height:500px;
-  margin: 10px;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 /* Attempting to add nth child styling */
@@ -201,7 +192,17 @@ img {
 }
 
 /*-------------------------------------------*/
-/* EVERY NTH-CHILD */
+/* MEDIA TYPES */
 /*-------------------------------------------*/
 
-/* Insert pretty app code here */
+@media screen and (min-width: 600px) {
+  .card-container {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .card-container {
+    flex: 1 1 calc(33% - 2rem);
+  }
+}
