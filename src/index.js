@@ -45,6 +45,8 @@ class Card extends React.Component {
   }
 }
 
+
+
 // Adding the following code snippet to CardBack to try to link to JSON Data will just break the whole app:
 // <h3 className="title">{this.props.record.title}</h3>
 // Returns a "TypeError: Cannot read property 'title' of undefined"
@@ -80,7 +82,19 @@ class CardBack extends React.Component {
       <div className='card-side side-back'>
         <div className='container-fluid'>
           <h3 className="title">{this.props.record.title}</h3>
-          <p>Put stuff here</p>
+            <ul className="album-info">
+              <li><strong>Artist: </strong> {this.props.record.artist}</li>
+              <li><strong>Record Label: </strong>{this.props.record.label}</li>
+              <li><strong>Year: </strong>{this.props.record.year}</li>
+              <li><strong>Genre: </strong>{this.props.record.genre}</li>
+            </ul>
+            <ul className="track-info">
+              <li><strong>Track Name: </strong>{this.props.record.tracks.title}</li>
+              <li><strong>Duration: </strong>{this.props.record.tracks.duration}</li>
+              <li><strong>BPM: </strong>{this.props.record.tracks.bpm}</li>
+              <li><strong>Key: </strong>{this.props.record.tracks.key}</li>
+              <li><strong>Composer: </strong>{this.props.record.tracks.composer}</li>
+            </ul>
         </div>
       </div>
     )
