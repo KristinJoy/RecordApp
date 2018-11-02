@@ -10,7 +10,17 @@ body {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   background-color: #e6e6e6;
-  margin: 0;
+  margin-top: 10em;
+
+  /* svg background */
+  background-color: #e5f9ff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000000' stroke-width='37.9' stroke-opacity='0.09' %3E%3Ccircle fill='%23e5f9ff' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23ddf4ff' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23d4edff' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23cce4ff' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23c3d9ff' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23bbcdff' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23b2c0ff' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23aab0ff' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23a3a1ff' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23a599ff' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23a990ff' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23ae88ff' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23b57fff' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23bd77ff' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23c76eff' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23d366ff' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23e15dff' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23f055ff' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+
+  /* smooth fonts */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -37,37 +47,29 @@ ul {
 }
 
 
-
 /*-------------------------------------------*/
 /* HEADER COMPONENT */
 /*-------------------------------------------*/
 
-.svg-header {
-font-family: "Arial Black", Gadget, sans-serif;;
-    position: relative;
-    height: 300px;
-    background-image: linear-gradient(#7000e5, #0003E5);
-
-}
-
-.svg-header h1 {
+.sticky-header h1 {
   color: white;
-  padding: 70px 0;
+  padding: 10px 0;
   text-align: center;
-  font-size: 78px;
+  justify-content: center;
+  font-size: 95px;
   line-height: 1;
   letter-spacing: 4px;
   word-spacing: 4px;
-  color: white;
+  text-shadow: 3px 3px 8px rgba(17, 17, 17, 1);
 
+  /* sticky header */
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: calc(100% - 17px);
 }
 
-svg {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 12vw;
-}
 
 /*-------------------------------------------*/
 /* MAIN COMPONENT */
@@ -114,7 +116,7 @@ img {
   overflow: hidden;
 }
 
-/* Attempting to add nth child styling */
+/* nth child styling */
 .card-container:nth-child(2n) .title {
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
@@ -187,6 +189,7 @@ img {
   color: black;
 }
 
+
 /*-------------------------------------------*/
 /* BACK SIDE */
 /*-------------------------------------------*/
@@ -227,6 +230,7 @@ img {
   padding: 0 2.5rem 2.5rem;
   margin: 0
 }
+
 
 /*-------------------------------------------*/
 /* MEDIA TYPES */

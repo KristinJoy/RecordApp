@@ -26,18 +26,8 @@ class App extends React.Component {
 class Header extends React.Component {
   render() {
     return(
-      <div className='svg-header'>
-        <h1>RECORD TIME</h1>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
-          >
-            <polygon
-            fill="#e6e6e6"
-            points="0,100 100,0 100,100"
-            />
-          </svg>
+      <div className='sticky-header'>
+        <h1>RECORD TIME!</h1>
       </div>
     )
   }
