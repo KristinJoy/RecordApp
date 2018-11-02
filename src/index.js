@@ -20,6 +20,20 @@ class Deck extends React.Component {
   render() {
       let result = [];
       for (var i = 0; i < Data.records.length; i++) {
+        /*
+          Card below will need a key property! All you need is a unique key
+          amongst *siblings*. It does not need to be globally unique, and can
+          usually just be the array index.
+
+          This is an efficiency benefit. React is using the key to recognize
+          what has changed, and what has simply moved. This will assure that
+          React will not re-render things that it doesn't need to.
+
+          This will become more important when we integrate a database...
+        */
+
+        // my suggestion:
+        //result.push(<Card key={i} record={Data.records[i]}/>);
         result.push(<Card record={Data.records[i]}/>);
       }
       return(result)
@@ -36,8 +50,6 @@ class Card extends React.Component {
       <div className='card-container'>
         <div className='card-body'>
           <CardBack record={this.props.record} />
-
-
           <CardFront record={this.props.record} />
         </div>
       </div>
@@ -63,7 +75,7 @@ class CardFront extends React.Component {
             <div className='col-xs-6'>
               <img className="image" src={this.props.record.art}/>
             </div>
-              <div className='col-xs-6 side-front-content'>
+            <div className='col-xs-6 side-front-content'>
 
             </div>
           </div>
@@ -81,6 +93,11 @@ class CardBack extends React.Component {
     return(
       <div className='card-side side-back'>
         <div className='container-fluid'>
+          {/*
+            How can you constrain the title to assure that no characters
+            are hidden within the circle? Try playing with max-width, and
+            test these elements with short names, normal names, long names...
+          */}
           <h3 className="title">{this.props.record.title}</h3>
             <ul className="album-info">
               <li><strong>Artist: </strong> {this.props.record.artist}</li>
