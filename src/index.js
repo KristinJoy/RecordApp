@@ -9,10 +9,12 @@ import Data from './records.json';
 class App extends React.Component {
   render() {
     return(
-      <div>
-        <Header/>
-        <Deck/>
-      </div>
+        <div>
+          <Header/>
+          <div className='box'>
+            <Deck/>
+          </div>
+        </div>
     )
   }
 }
@@ -54,14 +56,14 @@ class Deck extends React.Component {
 class Card extends React.Component {
   render() {
     return(
-      <div className='card-container'>
-        <div className='card-body'>
-          <CardBack record={this.props.record} />
+        <div className='card-container'>
+          <div className='card-body'>
+            <CardBack record={this.props.record} />
 
 
-          <CardFront record={this.props.record} />
+            <CardFront record={this.props.record} />
+          </div>
         </div>
-      </div>
     )
   }
 }

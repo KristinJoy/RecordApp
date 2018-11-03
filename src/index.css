@@ -78,7 +78,6 @@ ul {
 /*----- flip app code -----*/
 
 .card-container {
-  position: relative;
   z-index: 1;
   margin-top: 0px;
   margin-bottom: 20px;
@@ -86,9 +85,6 @@ ul {
   margin-right: auto;
   width: 500px;
   height: 500px;
-  perspective: 1000px;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .card-container > div {
@@ -108,6 +104,14 @@ img {
   transform-style: preserve-3d;
   transition: all .7s linear;
 }
+
+/*----- flexbox -----*/
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
 
 /*----- pretty app code -----*/
 
