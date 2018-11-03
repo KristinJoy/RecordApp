@@ -1,17 +1,221 @@
-#root {
-  max-width: 1200px;
-  margin: 0 auto;
+/*-------------------------------------------*/
+/* GLOBAL */
+/*-------------------------------------------*/
+
+html {
+  font-size: 16px;
 }
 
-.title {
+body {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  background-color: #e6e6e6;
+  margin-top: 10em;
+
+  /* svg background */
+  background-color: #e5f9ff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000000' stroke-width='37.9' stroke-opacity='0.09' %3E%3Ccircle fill='%23e5f9ff' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23ddf4ff' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23d4edff' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23cce4ff' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23c3d9ff' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23bbcdff' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23b2c0ff' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23aab0ff' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23a3a1ff' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23a599ff' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23a990ff' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23ae88ff' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23b57fff' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23bd77ff' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23c76eff' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23d366ff' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23e15dff' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23f055ff' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+
+  /* smooth fonts */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h2 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0
+}
+
+
+/*-------------------------------------------*/
+/* HEADER COMPONENT */
+/*-------------------------------------------*/
+
+.sticky-header h1 {
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  justify-content: center;
+  font-size: 95px;
+  line-height: 1;
+  letter-spacing: 4px;
+  word-spacing: 4px;
+  text-shadow: 3px 3px 8px rgba(17, 17, 17, 1);
+
+  /* sticky header */
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: calc(100% - 17px);
+}
+
+
+/*-------------------------------------------*/
+/* MAIN COMPONENT */
+/*-------------------------------------------*/
+
+/*----- flip app code -----*/
+
+.card-container {
+  z-index: 1;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  height: 500px;
+}
+
+.card-container > div {
+  width: 500px;
+  height:500px;
+  margin: 10px;
+}
+
+img {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.card-body {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all .7s linear;
+}
+
+/*----- flexbox -----*/
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+
+/*----- pretty app code -----*/
+
+.card-body > div {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* nth child styling */
+.card-container:nth-child(2n) .title {
+  background-image: linear-gradient(120deg, #463300 0%, #d73300 100%);
+}
+
+.card-container:nth-child(3n) .title {
+  background-image: linear-gradient(120deg, #006682 0%, #00663c 100%);
+}
+
+.card-container:nth-child(4n) .title {
+  background-image: linear-gradient(120deg, #640033 0%, #b90033 100%);
+}
+
+
+/*-------------------------------------------*/
+/* FLIP ON HOVER */
+/*-------------------------------------------*/
+
+.card-container:hover .card-body {
+  transform: rotateY(180deg);
+}
+
+.card-container:hover > .card-body > .side-front {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in, visibility .75s linear;
+}
+
+
+/*-------------------------------------------*/
+/* CARD SIDES - BOTH */
+/*-------------------------------------------*/
+
+.card-side {
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  color: #212121;
+  background-color: #fff;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 35px rgba(50,50,93,.1),0 2px 15px rgba(0,0,0,.07);
+}
+
+
+/*-------------------------------------------*/
+/* FRONT SIDE */
+/*-------------------------------------------*/
+
+/*----- flip app code -----*/
+
+.side-front [class^=col-xs]:first-of-type {
+  padding-left: 0;
+}
+
+.side-front-content {
+  padding-top: 32px;
+  padding-right: 32px;
+  padding-bottom: 32px;
+}
+
+/*----- pretty app code -----*/
+
+.back-title {
   text-align: center;
   padding: 1.5rem 2.5rem;
   background-image: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
   margin: 0 0 2rem 0;
   font-size: 1.5rem;
-  color: white;
-  position: absolute;
+  color: black;
+}
+
+
+/*-------------------------------------------*/
+/* BACK SIDE */
+/*-------------------------------------------*/
+
+/*----- flip app code -----*/
+
+.side-back {
   z-index: 2;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+/*----- pretty app code (for record data) -----*/
+
+.title {
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+  background-image: linear-gradient(120deg, #00336e 0%, #0033e6 100%);
+  margin: 1rem 0 1rem 0;
+  font-size: calc(1.75vw + 1.5vh + 1vmin);
+  color: white;
+  overflow-wrap: break-word;
 }
 
 .album-info {
@@ -32,66 +236,19 @@
   margin: 0
 }
 
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
+
+/*-------------------------------------------*/
+/* MEDIA TYPES */
+/*-------------------------------------------*/
+
+@media screen and (min-width: 600px) {
+  .card-container {
+    flex: 1 1 calc(50% - 2rem);
+  }
 }
 
-.card-container > div {
-  width: 500px;
-  height:500px;
-  margin: 10px;
-  justify-content: center;
-}
-
-
-.card-body {
-  margin: 1rem;
-  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
-  border-radius: 50%;
-  overflow: hidden;
-  transition: all .2s linear;
-  backface-visibility: hidden;
-}
-/* ^^^ The backface-visibility being hidden is probably the only reason why it looks like a card flips to a backside. There might not be any actual target area to put stuff on the backside. */
-
-.card-body:hover {
-  box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
-  /* transform: translate3D(0, -2px, 0); */
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.flex-container:nth-child(2n) .title  {
-  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-}
-
-.flex-container:nth-child(3n)  .title {
-  background-image: linear-gradient(120deg, #ff9a9e 0%, #fecfef 100%);
-}
-
-.flex-container:nth-child(4n) .title {
-  background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
-}
-
-.card: .image {
-  height: auto;
-  opacity: 0.5;
-}
-
-.image {
-filter: grayscale(100%);
-height: auto;
-opacity: 0.5;
-border-radius: 50%;
-overflow: hidden;
-transition: all .2s linear;
-width: 500px;
-height:500px;
-justify-content: center;
-position: relative;
-z-index: 1;
+@media screen and (min-width: 900px) {
+  .card-container {
+    flex: 1 1 calc(33% - 2rem);
+  }
 }
