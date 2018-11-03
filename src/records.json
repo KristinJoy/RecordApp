@@ -1,12 +1,88 @@
 {
   "records": [
     {
+      "title":"A Moment Apart",
+      "artist":"ODESZA",
+      "year":2017,
+      "genre":["Future Bass"],
+      "label":"Foreign Family Collective",
+      "art": "albumArt/Odesza.jpg",
+      "tracks": {
+          "title": "Higher Ground",
+          "duration": "3 min",
+          "bpm": 105,
+          "key": "11A",
+          "composer": "ODESZA"
+        }
+    },
+    {
+      "title": "After Life",
+      "artist": "Tchami",
+      "year": 2015,
+      "genre": "Future House",
+      "label": "Confession",
+      "art": "albumArt/Tchami.jpg",
+      "tracks": {
+        "title": "Missing You (feat. AC Slater, Kaleem Taylor)",
+        "duration": "5 mins",
+        "bpm": 127,
+        "key": "4B",
+        "composer": "Martin Bresso"
+      }
+    },
+
+    {
+      "title": "Movin' Melodies",
+      "artist": "ATB",
+      "year": 1999,
+      "genre": ["Trance", " | Euro House"],
+      "label": "Kontor Records",
+      "art": "albumArt/ATB.jpg",
+      "tracks": {
+        "title": "9PM (Till I Come)",
+        "duration": "3 mins",
+        "bpm": 130,
+        "key": "8A",
+        "composer": "Andre Tanneberger"
+      }
+    },
+    {
+      "title": "3",
+      "artist": "Netsky",
+      "year": 2016,
+      "genre": ["Drum n Bass", " | Breakbeat"],
+      "label":"Ultra",
+      "art": "albumArt/Netsky.jpg",
+      "tracks": {
+        "title": "Go 2",
+        "duration": "4 mins",
+        "bpm": 172,
+        "key": "4A",
+        "composer": "Boris Daenen"
+      }
+    },
+    {
+      "title": "Stargazing",
+      "artist": "Kygo",
+      "year": 2017,
+      "genre": "Tropical House",
+      "label": "Kygo Music",
+      "art": "albumArt/Kygo.jpg",
+      "tracks": {
+        "title": "Stargazing (feat. Justin Jesso)",
+        "duration": "3 mins",
+        "bpm": 99,
+        "key": "7B",
+        "composer": "Kyrre Gørvell-Dahll"
+      }
+    },
+    {
       "title": "LA Woman",
       "artist": "The Doors",
       "year": 1970,
       "genre":"Acid Rock",
       "label":"Electra",
-      "art": "albumArt/LAWoman.jpg",
+      "art": "albumArt/Doors.jpg",
       "tracks": {
         "title": "LA Woman",
         "duration": "5 min",
@@ -21,7 +97,7 @@
       "year": 2006,
       "genre":["Folk Rock", " | Indy Rock"],
       "label":"Capitol/Rough Trade",
-      "art": "albumArt/cranewife.jpg",
+      "art": "albumArt/thedecemberists.jpg",
       "tracks": {
           "title": "O Valencia!",
           "duration": "5 min",
@@ -46,12 +122,27 @@
         }
     },
     {
+      "title": "Even Angels Cast Shadows",
+      "artist": "Omni Trio",
+      "year": 2001,
+      "genre": ["Drum n Bass", " | Jungle"],
+      "label":"Moving Shadow",
+      "art": "albumArt/Omnitrio.jpg",
+      "tracks": {
+        "title": "Higher Ground",
+        "duration": "6 mins",
+        "bpm": 108,
+        "key": "6A",
+        "composer": "Rob Haigh"
+        }
+    },
+    {
       "title":"Time Without Consequence",
       "artist":"Alexi Murdoch",
       "year":2006,
       "genre":["Alternative", " | Indy Folk"],
       "label":"Zero Summer",
-      "art": "albumArt/Alexi.jpg",
+      "art": "albumArt/Aleximurdoch.jpg",
       "tracks": {
           "title": "All My Days",
           "duration": "4 min",
@@ -61,19 +152,19 @@
         }
     },
     {
-      "title":"A Moment Apart",
-      "artist":"ODESZA",
-      "year":2017,
-      "genre":["Future Bass"],
-      "label":"Foreign Family Collective",
-      "art": "albumArt/amomentapart.jpg",
+      "title": "The Richard D. James Album",
+      "artist": "Aphex Twin",
+      "year": 1996,
+      "genre": "Drum n Bass",
+      "label": "Warp",
+      "art": "albumArt/Aphextwin.jpg",
       "tracks": {
-          "title": "Higher Ground",
-          "duration": "3 min",
-          "bpm": 105,
-          "key": "11A",
-          "composer": "ODESZA"
-        }
+        "title": "Girl/Boy Song",
+        "duration": "4 mins",
+        "bpm": 169,
+        "key": "8B",
+        "composer": "Richard James"
+      }
     },
     {
       "title":"The Dark Side of the Moon",
