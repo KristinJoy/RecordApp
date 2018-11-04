@@ -28,8 +28,7 @@ class App extends React.Component {
 class Header extends React.Component {
   render() {
     return(
-      <div className='sticky-header'>
-        <h1>RECORD TIME!</h1>
+      <div className='header'>
       </div>
     )
   }
