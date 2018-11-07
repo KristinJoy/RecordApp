@@ -8,7 +8,30 @@ import Data from './records.json';
 // -------------------------------------------
 class App extends React.Component {
   render() {
-    return(<Deck/>)
+    return(
+        <div>
+          <Header/>
+          <div className='box'>
+            <Deck/>
+          </div>
+        </div>
+    )
+  }
+}
+
+// -------------------------------------------
+// Header Component
+// -------------------------------------------
+
+// Create a responsive, non-rectangular header (SVG trapezoidal header)
+
+class Header extends React.Component {
+  render() {
+    return(
+      <div className='sticky-header'>
+        <h1>RECORD TIME!</h1>
+      </div>
+    )
   }
 }
 
@@ -33,23 +56,17 @@ class Deck extends React.Component {
 class Card extends React.Component {
   render() {
     return(
-      <div className='card-container'>
-        <div className='card-body'>
-          <CardBack record={this.props.record} />
+        <div className='card-container'>
+          <div className='card-body'>
+            <CardBack record={this.props.record} />
 
 
-          <CardFront record={this.props.record} />
+            <CardFront record={this.props.record} />
+          </div>
         </div>
-      </div>
     )
   }
 }
-
-
-
-// Adding the following code snippet to CardBack to try to link to JSON Data will just break the whole app:
-// <h3 className="title">{this.props.record.title}</h3>
-// Returns a "TypeError: Cannot read property 'title' of undefined"
 
 // -------------------------------------------
 // Front Side Component

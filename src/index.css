@@ -9,7 +9,18 @@ html {
 body {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
-  background-color: #fff;
+  background-color: #e6e6e6;
+  margin-top: 10em;
+
+  /* svg background */
+  background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='34.6' stroke-opacity='0.12' %3E%3Ccircle fill='%23ffffff' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23f1f1f1' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23e3e3e3' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23d5d5d5' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23c7c7c7' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23bababa' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23adadad' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%239f9f9f' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23939393' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23868686' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23797979' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%236d6d6d' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23616161' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23555555' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%234a4a4a' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%233e3e3e' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23343434' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23292929' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+
+  /* smooth fonts */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -37,19 +48,43 @@ ul {
 
 
 /*-------------------------------------------*/
+/* HEADER COMPONENT */
+/*-------------------------------------------*/
+
+.sticky-header h1 {
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  justify-content: center;
+  font-size: 95px;
+  line-height: 1;
+  letter-spacing: 4px;
+  word-spacing: 4px;
+  text-shadow: 3px 3px 8px rgba(17, 17, 17, 1);
+
+  /* sticky header */
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: calc(100% - 17px);
+}
+
+
+/*-------------------------------------------*/
 /* MAIN COMPONENT */
 /*-------------------------------------------*/
 
 /*----- flip app code -----*/
 
 .card-container {
-  position: relative;
   z-index: 1;
-  margin: 32px auto;
-  max-width: 520px;
-  perspective: 1000px;
-  display: flex;
-  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  height: 500px;
 }
 
 .card-container > div {
@@ -70,6 +105,14 @@ img {
   transition: all .7s linear;
 }
 
+/*----- flexbox -----*/
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+
 /*----- pretty app code -----*/
 
 .card-body > div {
@@ -77,17 +120,21 @@ img {
   overflow: hidden;
 }
 
-/* Attempting to add nth child styling */
+/* nth child styling */
 .card-container:nth-child(2n) .title {
-  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-image: linear-gradient(120deg, #463300 0%, #d73300 100%);
 }
 
 .card-container:nth-child(3n) .title {
-  background-image: linear-gradient(120deg, #ff9a9e 0%, #fecfef 100%);
+  background-image: linear-gradient(120deg, #006682 0%, #00663c 100%);
 }
 
 .card-container:nth-child(4n) .title {
-  background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
+  background-image: linear-gradient(120deg, #640033 0%, #b90033 100%);
+}
+
+.card-container:nth-child(5n) .title {
+  background-image: linear-gradient(120deg, #2d0066 0%, #8c0066 100%);
 }
 
 
@@ -150,6 +197,7 @@ img {
   color: black;
 }
 
+
 /*-------------------------------------------*/
 /* BACK SIDE */
 /*-------------------------------------------*/
@@ -166,11 +214,12 @@ img {
 
 .title {
   text-align: center;
-  padding: 1.5rem 2.5rem;
-  background-image: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
-  margin: 0 0 2rem 0;
-  font-size: 1.5rem;
+  padding: 3.5rem 1.5rem;
+  background-image: linear-gradient(120deg, #00336e 0%, #0033e6 100%);
+  margin: 2rem 0 1rem 0;
+  font-size: calc(1.75vw + 1.5vh + 1vmin);
   color: white;
+  overflow-wrap: break-word;
 }
 
 .album-info {
@@ -190,6 +239,7 @@ img {
   padding: 0 2.5rem 2.5rem;
   margin: 0
 }
+
 
 /*-------------------------------------------*/
 /* MEDIA TYPES */
