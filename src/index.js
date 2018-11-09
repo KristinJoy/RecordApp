@@ -28,7 +28,18 @@ class App extends React.Component {
 class Header extends React.Component {
   render() {
     return(
-      <div className='header'>
+      <div className='svg-header'>
+        <h1>MELOPHiLiA</h1>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+          >
+            <polygon
+            fill="#cfd8dc"
+            points="0,100 100,0 100,100"
+            />
+          </svg>
       </div>
     )
   }
