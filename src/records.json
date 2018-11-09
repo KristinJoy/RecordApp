@@ -19,7 +19,7 @@
       "title": "After Life",
       "artist": "Tchami",
       "year": 2015,
-      "genre": "Future House",
+      "genre": ["Future House"],
       "label": "Confession",
       "art": "albumArt/Tchami.jpg",
       "tracks": {
@@ -65,7 +65,7 @@
       "title": "Stargazing",
       "artist": "Kygo",
       "year": 2017,
-      "genre": "Tropical House",
+      "genre": ["Tropical House"],
       "label": "Kygo Music",
       "art": "albumArt/Kygo.jpg",
       "tracks": {
@@ -80,7 +80,7 @@
       "title": "LA Woman",
       "artist": "The Doors",
       "year": 1970,
-      "genre":"Acid Rock",
+      "genre":["Acid Rock"],
       "label":"Electra",
       "art": "albumArt/Doors.jpg",
       "tracks": {
@@ -155,7 +155,7 @@
       "title": "The Richard D. James Album",
       "artist": "Aphex Twin",
       "year": 1996,
-      "genre": "Drum n Bass",
+      "genre": ["Drum n Bass"],
       "label": "Warp",
       "art": "albumArt/Aphextwin.jpg",
       "tracks": {
