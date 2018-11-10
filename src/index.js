@@ -1,22 +1,46 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import Data from './records.json';
+import axios from 'axios';
+
 
 // -------------------------------------------
 // App Component
 // -------------------------------------------
 class App extends React.Component {
-  render() {
-    return(
-        <div>
-          <Header/>
-          <div className='box'>
-            <Deck/>
-          </div>
-        </div>
-    )
+  constructor(){
+    super()
+    this.state={
+      data: "",
+      ready:false
+    }
   }
+
+  componentDidMount(){
+    axios.get('http://localhost:3000/getAll').then(res=>{
+      this.setState({
+        data:res.data,
+        ready:true
+      });
+    });
+  }
+
+  render() {
+    if (this.state.ready) {
+      return(
+          <div>
+            <Header/>
+            <div className='box'>
+              <Deck data={this.state.data}/>
+            </div>
+          </div>
+      )
+    } else {
+      return(<div>Loading...</div>)
+    }
+
+  }
+
 }
 
 // -------------------------------------------
@@ -29,7 +53,7 @@ class Header extends React.Component {
   render() {
     return(
       <div className='svg-header'>
-        <h1>MELOPHiLiA</h1>
+        <h1>SPiN DOC</h1>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 100 100"
@@ -50,12 +74,16 @@ class Header extends React.Component {
 // -------------------------------------------
 
 class Deck extends React.Component {
+  constructor(){
+    super()
+    // this.state
+  }
   render() {
-      let result = [];
-      for (var i = 0; i < Data.records.length; i++) {
-        result.push(<Card record={Data.records[i]}/>);
-      }
-      return(result)
+    let result = [];
+    for (var i = 0; i < this.props.data.length; i++) {
+      result.push(<Card record={this.props.data[i]}/>)
+    }
+    return result;
   }
 }
 
