@@ -4,6 +4,8 @@ import "./index.css";
 import axios from 'axios';
 
 
+
+
 // -------------------------------------------
 // App Component
 // -------------------------------------------
@@ -17,7 +19,7 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    axios.get('http://localhost:3000/getAll').then(res=>{
+    axios.get('http://localhost:3000/get').then(res=>{
       this.setState({
         data:res.data,
         ready:true
@@ -83,6 +85,7 @@ class Deck extends React.Component {
     for (var i = 0; i < this.props.data.length; i++) {
       result.push(<Card record={this.props.data[i]}/>)
     }
+    result.push(<CreateCard/>);
     return result;
   }
 }
@@ -106,6 +109,51 @@ class Card extends React.Component {
   }
 }
 
+//--------------------------------
+// Blank Add Card
+//-------------------------------
+
+class CreateCard extends React.Component {
+  render() {
+    return(
+        <div className='card-container2'>
+          <div className='card-body'>
+
+            <div className='card-side side-front'>
+              <div className='container-fluid'>
+                <div className='row'>
+                  <div className='col-xs-6'>
+                    <form className="form">
+                    <label>
+                    Artist:
+                    <input type="text" name="Artist" />
+                    </label>
+                    <input type="submit" value="Submit" />
+                    <label>
+                    Album:
+                    <input type="text" name="Album" />
+                    </label>
+                    <input type="submit" value="Submit" />
+                    <label>
+                    Tracks:
+                    <input type="text" name="Tracks" />
+                    </label>
+                    <input type="submit" value="Submit" />
+                    </form>
+                  </div>
+                  <div className='col-xs-6 side-front-content'>
+
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    )
+  }
+}
+
 // -------------------------------------------
 // Front Side Component
 // -------------------------------------------
@@ -118,7 +166,8 @@ class CardFront extends React.Component {
             <div className='col-xs-6'>
               <img className="image" src={this.props.record.art}/>
             </div>
-              <div className='col-xs-6 side-front-content'>
+            <div className='col-xs-6 side-front-content'>
+
 
             </div>
           </div>
@@ -155,6 +204,11 @@ class CardBack extends React.Component {
     )
   }
 }
+
+
+
+
+
 
 ReactDOM.render(
   <App />,

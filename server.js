@@ -26,9 +26,10 @@ var Album = mongoose.model('Album', albumSchema, "albums");
 // create basic express server, set route to root folder
 const app = express();
 app.use(cors());
-
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 // go inside of user model and pull out all albums
-app.get('/getAll', function(request, response) {
+app.get('/get', function(request, response) {
   Album.find({}, function(err, documents){
     if(err){
       console.log(err);
@@ -37,6 +38,48 @@ app.get('/getAll', function(request, response) {
     }
   });
 });
+
+app.get('/get/:albumid', function(request, response) {
+  Album.find({_id: request.params.albumid}, function(err, documents){
+    if(err){
+      console.log(err);
+    }else{
+      response.send(documents);
+    }
+  });
+});
+
+app.post('/update/:albumid', function(request, response) {
+  Album.findByIdAndUpdate({_id: request.params.albumid}, request.body, function(err, documents){
+    if(err){
+      console.log(err);
+    }else{
+      response.send(documents);
+    }
+  });
+});
+
+app.delete('/delete/:albumid', function(request, response) {
+  Album.findByIdAndRemove({_id: request.params.albumid}, request.body, function(err, documents){
+    if(err){
+      console.log(err);
+    }else{
+      response.send(documents);
+    }
+  });
+});
+
+app.post('/create', function(request, response) {
+  var vinyl = new Album(request.body);
+  vinyl.save(function(err, documents){
+    if(err){
+      console.log(err);
+    }else{
+      response.send(documents);
+    }
+  });
+});
+
 
 app.listen(3000, function(){
   'Server is running on 3000'
