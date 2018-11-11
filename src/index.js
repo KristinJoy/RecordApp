@@ -128,12 +128,18 @@ class CreateCard extends React.Component {
                     Artist:
                     <input type="text" name="Artist" />
                     </label>
-                    <input type="submit" value="Submit" />
                     <label>
                     Album:
                     <input type="text" name="Album" />
                     </label>
-                    <input type="submit" value="Submit" />
+                    <label>
+                    Label:
+                    <input type="text" name="Tracks" />
+                    </label>
+                    <label>
+                    Year:
+                    <input type="text" name="Tracks" />
+                    </label>
                     <label>
                     Tracks:
                     <input type="text" name="Tracks" />
