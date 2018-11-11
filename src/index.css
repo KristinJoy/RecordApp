@@ -35,24 +35,7 @@ ul {
 /* HEADER COMPONENT */
 /*-------------------------------------------*/
 
-  /* .header h1 {
-  color: white;
-  padding: 10px;
-  text-align: center;
-  justify-content: center;
-  font-size: 95px;
-  line-height: 1;
-  letter-spacing: 4px;
-  word-spacing: 4px;
-  text-shadow: 3px 3px 8px rgba(17, 17, 17, 1); */
 
-  /* sticky header */
-  /* display: flex;
-  margin-top: 5px;
-  top: 0;
-  z-index: 999;
-  width: calc(100% - 17px);
-}  */
 .svg-header {
 font-family: "TREBUCHET MS", Gadget, sans-serif;;
     position: relative;
